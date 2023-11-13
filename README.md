@@ -1,0 +1,2 @@
+# 236984_SQL_Grundlagen_Abfragesprache
+SQL Grundlage Abfragesprache
