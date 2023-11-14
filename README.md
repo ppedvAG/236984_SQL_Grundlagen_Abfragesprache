@@ -11,3 +11,11 @@ Tag 1:
 - Datentypen
 - Date/Time Functions
 - DISTINCT
+
+Tag 2:
+- String Funcions
+- Other Functions
+- System Functions
+- Aggregate
+- Views
+
