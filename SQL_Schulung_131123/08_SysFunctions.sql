@@ -9,7 +9,7 @@ SELECT OrderDate FROM Orders
 -- Akutelle Systemzeit:
 SELECT GETDATE()
 
-SELECT YEAR(OrderDate), MONTH(OrderDate), DAY(OrderDate), OrderDate FROM Orders
+SELECT YEAR(OrderDate) as Jahr, MONTH(OrderDate) as Monat, DAY(OrderDate) as Tag, OrderDate FROM Orders
 
 -- "Zieht" ein gewuenschtes Intervall aus einem Datum
 SELECT
@@ -20,10 +20,11 @@ DATEPART(WEEKDAY, OrderDate) AS Wochentag,
 DATEPART(HOUR, OrderDate) as Stunde
 FROM Orders
 
-SELECT DATEPART(YEAR, OrderDate) FROM Orders
+SELECT DATEPART(YEAR, OrderDate) as Jahr FROM Orders
 
 -- Zieht den IntervallNamen aus einem Datum
-SELECT DATENAME(MONTH, OrderDate), DATENAME(WEEKDAY, OrderDate), DATEPART(WEEKDAY, OrderDate), OrderDate FROM Orders
+SELECT DATENAME(MONTH, OrderDate), DATENAME(WEEKDAY, OrderDate), 
+DATEPART(WEEKDAY, OrderDate), OrderDate FROM Orders
 
 -- Intervall zu einem Datum addieren/subtrahieren
 SELECT DATEADD(DAY, 14, GETDATE())
@@ -64,4 +65,4 @@ SELECT OrderDate from Orders
 SELECT CONVERT(date, OrderDate) FROM Orders
 
 -- ISNULL prueft auf Null Werte und ersetzt diese wenn gewuenscht
-SELECT ISNULL(Fax, 'Nicht vorhanden!'), Fax FROM Customers
+SELECT ISNULL(Fax, 'Nicht vorhanden!') as KeineFax, Fax FROM Customers

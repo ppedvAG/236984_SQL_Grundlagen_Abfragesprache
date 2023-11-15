@@ -45,6 +45,7 @@ SELECT ProductName, SUM(Quantity) as SummeStueckzahl FROM [Order Details]
 JOIN Products ON Products.ProductID = [Order Details].ProductID
 WHERE CategoryID IN (1,2,3,4)
 GROUP BY ProductName
+-- HAVING
 ORDER BY SummeStueckzahl DESC
 
 --Verkaufte Stueckzahlen pro Produkt, aber nur ueber 1000
