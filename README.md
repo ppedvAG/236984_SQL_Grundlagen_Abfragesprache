@@ -19,3 +19,10 @@ Tag 2:
 - Aggregate
 - Views
 
+Tag 3:
+- Insert | Update | Delete
+- ALTER | DROP
+- TempTables
+- Stored Procedure
+- CASE
+- WHILE
